@@ -1,4 +1,4 @@
-package wzorce.behavioral.strategy.solution.java2;
+package wzorce.behavioral.strategy.solution.java3;
 
 class TaxFactory {
 
