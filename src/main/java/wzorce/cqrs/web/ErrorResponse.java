@@ -2,7 +2,7 @@ package wzorce.cqrs.web;
 
 import java.time.Instant;
 
-record ErrorResponse(
+public record ErrorResponse(
         String message,
         Instant timestamp) {
 

@@ -1,4 +1,4 @@
-package wzorce.cqrs.application.query;
+package wzorce.cqrs.query;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;

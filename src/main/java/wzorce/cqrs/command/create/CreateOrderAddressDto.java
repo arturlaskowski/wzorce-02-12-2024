@@ -1,4 +1,4 @@
-package wzorce.cqrs.application.command.dto;
+package wzorce.cqrs.command.create;
 
 import jakarta.validation.constraints.NotBlank;
 

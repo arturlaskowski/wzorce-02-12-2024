@@ -6,7 +6,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import wzorce.cqrs.application.exeption.OrderNotFoundException;
+import wzorce.cqrs.command.OrderNotFoundException;
 import wzorce.cqrs.domain.OrderDomainException;
 
 import java.util.stream.Collectors;

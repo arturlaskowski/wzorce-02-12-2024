@@ -1,10 +1,10 @@
-package wzorce.cqrs.application.query;
+package wzorce.cqrs.query;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import wzorce.cqrs.application.exeption.OrderNotFoundException;
+import wzorce.cqrs.command.OrderNotFoundException;
 import wzorce.cqrs.domain.Order;
 import wzorce.cqrs.domain.OrderId;
 import wzorce.cqrs.domain.OrderStatus;

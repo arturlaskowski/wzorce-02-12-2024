@@ -3,8 +3,7 @@ package wzorce.cqrs.domain;
 import java.io.Serializable;
 import java.util.Objects;
 
-
-public class OrderItemId implements Serializable {
+class OrderItemId implements Serializable {
 
     private Integer id;
     private Order order;

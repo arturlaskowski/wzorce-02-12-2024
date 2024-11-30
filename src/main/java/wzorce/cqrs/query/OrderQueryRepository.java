@@ -1,4 +1,4 @@
-package wzorce.cqrs.application.query;
+package wzorce.cqrs.query;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

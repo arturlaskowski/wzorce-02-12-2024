@@ -1,4 +1,4 @@
-package wzorce.cqrs.application.exeption;
+package wzorce.cqrs.command;
 
 
 import wzorce.cqrs.domain.OrderId;

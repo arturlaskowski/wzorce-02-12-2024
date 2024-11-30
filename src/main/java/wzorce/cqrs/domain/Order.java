@@ -13,8 +13,8 @@ import static wzorce.cqrs.domain.OrderStatus.APPROVED;
 import static wzorce.cqrs.domain.OrderStatus.PAID;
 
 
-@Table(name = "orders")
 @Entity
+@Table(name = "orders")
 @Getter
 public class Order {
 
@@ -52,8 +52,8 @@ public class Order {
     protected Order() {
     }
 
-    public Order(CustomerId customerId, Money price, List<OrderItem> items, OrderAddress address) {
-        this.id = OrderId.newOne();
+    public Order(OrderId orderId, CustomerId customerId, Money price, List<OrderItem> items, OrderAddress address) {
+        this.id = orderId;
         this.customerId = customerId;
         this.price = price;
         this.items = items;
@@ -108,7 +108,7 @@ public class Order {
     }
 
     public boolean isPaid() {
-        return OrderStatus.PAID == status;
+        return PAID == status;
     }
 
     public boolean isApproved() {

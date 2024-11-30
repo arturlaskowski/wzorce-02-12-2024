@@ -3,23 +3,23 @@ package wzorce.cqrs.web;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
-import wzorce.cqrs.application.command.dto.CreateOrderAddressDto;
-import wzorce.cqrs.application.command.dto.CreateOrderCommand;
-import wzorce.cqrs.application.command.dto.CreateOrderItemDto;
+import wzorce.cqrs.command.create.CreateOrderAddressDto;
+import wzorce.cqrs.command.create.CreateOrderCommand;
+import wzorce.cqrs.command.create.CreateOrderItemDto;
 import wzorce.cqrs.domain.CustomerId;
+import wzorce.cqrs.domain.OrderId;
 import wzorce.cqrs.web.dto.CreateOrderRequest;
-
-import java.util.stream.Collectors;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 class OrderApiMapper {
 
-    public static CreateOrderCommand mapToCreateOrderCommand(CreateOrderRequest createOrderRequest) {
+    public static CreateOrderCommand mapToCreateOrderCommand(OrderId orderId, CreateOrderRequest createOrderRequest) {
         var itemsDto = createOrderRequest.items().stream()
                 .map(OrderApiMapper::mapToItem)
-                .collect(Collectors.toList());
+                .toList();
 
         return new CreateOrderCommand(
+                orderId,
                 new CustomerId(createOrderRequest.customerId()),
                 createOrderRequest.price(),
                 itemsDto,
