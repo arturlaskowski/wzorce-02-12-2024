@@ -1,8 +1,12 @@
 package wzorce.creational.factory.aclass.order;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 import java.math.BigDecimal;
 import java.util.List;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 class OrderFactory {
 
     static Order createOrder(List<Product> products, ShippingMethod shippingMethod) {
