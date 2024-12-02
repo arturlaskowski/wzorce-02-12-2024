@@ -31,6 +31,6 @@ class Reward {
     }
 
     public void extendRewardDuration(LocalDate localDate) {
-        rewardDateRange.extendDate(localDate);
+        this.rewardDateRange = this.rewardDateRange.extendDate(localDate);
     }
 }
